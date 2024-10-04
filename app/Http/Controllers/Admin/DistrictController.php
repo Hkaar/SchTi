@@ -35,7 +35,7 @@ class DistrictController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(District $district)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class DistrictController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(District $district)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class DistrictController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, District $district)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class DistrictController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(District $district)
+    public function destroy(int $id)
     {
         //
     }

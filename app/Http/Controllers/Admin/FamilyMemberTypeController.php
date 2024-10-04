@@ -35,7 +35,7 @@ class FamilyMemberTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(FamilyMemberType $familyMemberType)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class FamilyMemberTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(FamilyMemberType $familyMemberType)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class FamilyMemberTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, FamilyMemberType $familyMemberType)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class FamilyMemberTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(FamilyMemberType $familyMemberType)
+    public function destroy(int $id)
     {
         //
     }

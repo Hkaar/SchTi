@@ -35,7 +35,7 @@ class SchoolController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(School $school)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class SchoolController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(School $school)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class SchoolController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, School $school)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class SchoolController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(School $school)
+    public function destroy(int $id)
     {
         //
     }

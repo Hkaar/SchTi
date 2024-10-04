@@ -35,7 +35,7 @@ class AttendanceStatusController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AttendanceStatus $attendanceStatus)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class AttendanceStatusController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(AttendanceStatus $attendanceStatus)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class AttendanceStatusController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, AttendanceStatus $attendanceStatus)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class AttendanceStatusController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AttendanceStatus $attendanceStatus)
+    public function destroy(int $id)
     {
         //
     }
