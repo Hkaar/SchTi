@@ -1,4 +1,9 @@
 import 'preline';
+import 'material-symbols/outlined.css';
+
+import.meta.glob([
+    '../images/**/*',
+]);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -7,8 +12,10 @@ import 'preline';
  */
 
 import axios from 'axios';
+// @ts-ignore
 window.axios = axios;
 
+// @ts-ignore
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
