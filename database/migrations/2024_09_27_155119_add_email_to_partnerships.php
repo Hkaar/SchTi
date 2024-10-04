@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('settings', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-            $table->text('value')->nullable();
-            $table->timestamps();
+        Schema::table('partnerships', function (Blueprint $table) {
+            $table->string('email')->unique();
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('settings');
+        Schema::table('partnerships', function (Blueprint $table) {
+            //
+        });
     }
 };
