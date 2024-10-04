@@ -18,9 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'username',
         'name',
         'email',
         'password',
+        'profile_photo',
+
     ];
 
     /**
@@ -41,4 +44,50 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Define the relationship with signups
+     */
+    public function signups()
+    {
+        return $this->hasMany(SignUp::class, 'user_id', 'id');
+    }
+
+    /**
+     * Define the relationship with roles
+     */
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'user_roles');
+    }
+
+    /**
+     * Define the relationship with groups
+     */
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class, 'user_groups');
+    }
+
+    /**
+     * Define the relationship with student attendances
+     */
+    public function attendances()
+    {
+        return $this->hasMany(StudentAttendance::class, 'user_id', 'id');
+    }
+
+    /**
+     * Checks the level of permission a user has
+     *
+     * @param  string|array<string>  $names
+     */
+    public function checkRole(string|array $names): bool
+    {
+        if (is_string($names)) {
+            return $this->role->name === $names;
+        }
+
+        return in_array($this->role->name, $names);
+    }
 }
