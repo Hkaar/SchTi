@@ -35,7 +35,7 @@ class PartnerShipController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PartnerShip $partnerShip)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class PartnerShipController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PartnerShip $partnerShip)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class PartnerShipController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, PartnerShip $partnerShip)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class PartnerShipController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PartnerShip $partnerShip)
+    public function destroy(int $id)
     {
         //
     }

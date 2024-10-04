@@ -35,7 +35,7 @@ class GroupController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Group $group)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class GroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Group $group)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class GroupController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Group $group)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class GroupController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Group $group)
+    public function destroy(int $id)
     {
         //
     }

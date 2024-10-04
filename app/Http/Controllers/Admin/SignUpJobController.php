@@ -35,7 +35,7 @@ class SignUpJobController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SignUpJob $signUpJob)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class SignUpJobController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SignUpJob $signUpJob)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class SignUpJobController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SignUpJob $signUpJob)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class SignUpJobController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SignUpJob $signUpJob)
+    public function destroy(int $id)
     {
         //
     }

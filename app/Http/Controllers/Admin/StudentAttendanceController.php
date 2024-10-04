@@ -35,7 +35,7 @@ class StudentAttendanceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(StudentAttendance $studentAttendance)
+    public function show(int $id)
     {
         //
     }
@@ -43,7 +43,7 @@ class StudentAttendanceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(StudentAttendance $studentAttendance)
+    public function edit(int $id)
     {
         //
     }
@@ -51,7 +51,7 @@ class StudentAttendanceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, StudentAttendance $studentAttendance)
+    public function update(Request $request, int $id)
     {
         //
     }
@@ -59,7 +59,7 @@ class StudentAttendanceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(StudentAttendance $studentAttendance)
+    public function destroy(int $id)
     {
         //
     }
