@@ -2,6 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class SettingServiceProvider extends ServiceProvider
@@ -19,6 +24,26 @@ class SettingServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        try {
+            $settings = $this->extractNested(Setting::all(['name', 'value'])->toArray());
+        } catch (\Throwable $th) {
+            $settings = [];
+        }
+        
+        View::share('settings', $settings);
+    }
+
+    /**
+     * Extract the nested items of an array
+     */
+    private function extractNested(array $items): array
+    {
+        $result = [];
+
+        foreach ($items as $nested) {
+            $result[reset($nested)] = end($nested);
+        }
+
+        return $result;
     }
 }
