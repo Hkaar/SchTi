@@ -1,5 +1,6 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build"
@@ -17,6 +18,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "material-symbols": "^0.23.0",
         "preline": "^2.4.1"
     }
 }
