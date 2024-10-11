@@ -31,7 +31,7 @@ class School extends Model
      */
     public function signups()
     {
-        $this->hasMany(SignUp::class, 'school_id', 'id');
+        return $this->hasMany(SignUp::class, 'school_id', 'id');
     }
 
     /**
