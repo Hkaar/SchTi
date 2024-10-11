@@ -4,16 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\City;
+use App\Traits\Modelor;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class CityController extends Controller
 {
+    use Modelor;
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $cities = City::paginate(20);
+
+        return view('admin.cities.index', [
+            'cities' => $cities,
+        ]);
     }
 
     /**
@@ -21,7 +29,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.cities.create');
     }
 
     /**
@@ -29,7 +37,13 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:cities,name',
+        ]);
+
+        City::create($validated);
+
+        return redirect()->route('admin.cities.index');
     }
 
     /**
@@ -37,7 +51,11 @@ class CityController extends Controller
      */
     public function show(int $id)
     {
-        //
+        $city = City::findOrFail($id);
+
+        return view('admin.cities.show', [
+            'city' => $city,
+        ]);
     }
 
     /**
@@ -45,7 +63,11 @@ class CityController extends Controller
      */
     public function edit(int $id)
     {
-        //
+        $city = City::findOrFail($id);
+
+        return view('admin.cities.edit', [
+            'city' => $city,
+        ]);
     }
 
     /**
@@ -53,7 +75,16 @@ class CityController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        //
+        $city = City::findOrFail($id);
+
+        $validated = $request->validate([
+            'name' => ['nullable', 'string', 'max:255', Rule::unique('cities', 'name')->ignore($city->id)],
+        ]);
+
+        $this->updateModel($city, $validated);
+        $city->save();
+
+        return redirect()->route('admin.cities.index');
     }
 
     /**
@@ -61,6 +92,13 @@ class CityController extends Controller
      */
     public function destroy(int $id)
     {
-        //
+        $city = City::findOrFail($id);
+
+        $city->districts()->delete();
+        $city->signups()->delete();
+
+        $city->delete();
+
+        return response(null);
     }
 }

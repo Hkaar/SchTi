@@ -4,32 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\AttendanceStatus;
+use App\Traits\Modelor;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class AttendanceStatusController extends Controller
 {
+    use Modelor;
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
-    }
+        $statuses = AttendanceStatus::paginate(20);
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+        return view('admin.attendance-statusese.index', [
+            'statuses' => $statuses,
+        ]);
     }
 
     /**
@@ -37,7 +29,11 @@ class AttendanceStatusController extends Controller
      */
     public function show(int $id)
     {
-        //
+        $status = AttendanceStatus::findOrFail($id);
+
+        return view('admin.attendance-statuses.show', [
+            'status' => $status,
+        ]);
     }
 
     /**
@@ -45,7 +41,11 @@ class AttendanceStatusController extends Controller
      */
     public function edit(int $id)
     {
-        //
+        $status = AttendanceStatus::findOrFail($id);
+
+        return view('admin.attendance-statuses.edit', [
+            'status' => $status,
+        ]);
     }
 
     /**
@@ -53,14 +53,14 @@ class AttendanceStatusController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        //
-    }
+        $status = AttendanceStatus::findOrFail($id);
+        
+        $validated = $request->validate([
+            'name' => ['nullable', 'string', 'max:255', Rule::unique('attendance_statuses', 'name')->ignore($status->id)],
+        ]);
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(int $id)
-    {
-        //
+        $this->updateModel($status, $validated);
+
+        return redirect()->route('admin.attendance-statuses.index');
     }
 }

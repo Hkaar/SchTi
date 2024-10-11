@@ -4,16 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Group;
+use App\Traits\Modelor;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class GroupController extends Controller
 {
+    use Modelor;
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $groups = Group::paginate(20);
+
+        return view('admin.groups.index', [
+            'groups' => $groups,
+        ]);
     }
 
     /**
@@ -21,7 +29,7 @@ class GroupController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.groups.create');
     }
 
     /**
@@ -29,7 +37,13 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required|string|max:255|unique:groups,name',
+        ]);
+
+        Group::create($validated);
+
+        return redirect()->route('admin.groups.index');
     }
 
     /**
@@ -37,7 +51,13 @@ class GroupController extends Controller
      */
     public function show(int $id)
     {
-        //
+        $group = Group::findOrFail($id);
+
+        assert($group instanceof Group, "Expected a group instance to be returned but got {$group} instead!");
+
+        return view('admin.groups.show', [
+            'group' => $group,
+        ]);
     }
 
     /**
@@ -45,7 +65,13 @@ class GroupController extends Controller
      */
     public function edit(int $id)
     {
-        //
+        $group = Group::findOrFail($id);
+
+        assert($group instanceof Group, "Expected a group instance to be returned but got {$group} instead!");
+
+        return view('admin.groups.edit', [
+            'group' => $group,
+        ]);
     }
 
     /**
@@ -53,7 +79,17 @@ class GroupController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        //
+        $group = Group::findOrFail($id);
+
+        assert($group instanceof Group, "Expected a group instance to be returned but got {$group} instead!");
+
+        $validated = $request->validate([
+            'name' => ['nullable', 'string', 'max:255', Rule::unique('groups', 'name')->ignore($group->id)],
+        ]);
+
+        $this->updateModel($group, $validated);
+
+        return redirect()->route('admin.groups.index');
     }
 
     /**
@@ -61,6 +97,13 @@ class GroupController extends Controller
      */
     public function destroy(int $id)
     {
-        //
+        $group = Group::findOrFail($id);
+
+        assert($group instanceof Group, "Expected a group instance to be returned but got {$group} instead!");
+
+        $group->users()->detach();
+        $group->delete();
+
+        return response(null);
     }
 }

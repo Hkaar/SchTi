@@ -4,16 +4,23 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\StudentAttendance;
+use App\Traits\Modelor;
 use Illuminate\Http\Request;
 
 class StudentAttendanceController extends Controller
 {
+    use Modelor;
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $attendances = StudentAttendance::paginate(20);
+
+        return view('admin.student-attendances.index', [
+            'attendances' => $attendances,
+        ]);
     }
 
     /**
@@ -21,7 +28,7 @@ class StudentAttendanceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.student-attendances.create');
     }
 
     /**
@@ -29,7 +36,15 @@ class StudentAttendanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'user_id' => 'required|numeric|exists:users,id',
+            'attendance_status_id' => 'required|numeric|exists:attendance_statuses,id',
+            'attendance_date' => 'required|date',
+        ]);
+
+        StudentAttendance::create($validated);
+
+        return redirect()->route('admin.student-attendances.index');
     }
 
     /**
@@ -37,7 +52,13 @@ class StudentAttendanceController extends Controller
      */
     public function show(int $id)
     {
-        //
+        $attendance = StudentAttendance::findOrFail($id);
+
+        assert($attendance instanceof StudentAttendance, "Expected a school instance to be returned but got {$attendance} instead!");
+
+        return view('admin.student-attendances.show', [
+            'attendance' => $attendance,
+        ]);
     }
 
     /**
@@ -45,7 +66,13 @@ class StudentAttendanceController extends Controller
      */
     public function edit(int $id)
     {
-        //
+        $attendance = StudentAttendance::findOrFail($id);
+
+        assert($attendance instanceof StudentAttendance, "Expected a school instance to be returned but got {$attendance} instead!");
+
+        return view('admin.student-attendances.edit', [
+            'attendance' => $attendance,
+        ]);
     }
 
     /**
@@ -53,7 +80,19 @@ class StudentAttendanceController extends Controller
      */
     public function update(Request $request, int $id)
     {
-        //
+        $attendance = StudentAttendance::findOrFail($id);
+
+        assert($attendance instanceof StudentAttendance, "Expected a school instance to be returned but got {$attendance} instead!");
+
+        $validated = $request->validate([
+            'user_id' => 'nullable|numeric|exists:users,id',
+            'attendance_status_id' => 'nullable|numeric|exists:attendance_statuses,id',
+            'attendance_date' => 'nullable|date',
+        ]);
+
+        $this->updateModel($attendance, $validated);
+
+        return redirect()->route('admin.student-attendances.index');
     }
 
     /**
@@ -61,6 +100,12 @@ class StudentAttendanceController extends Controller
      */
     public function destroy(int $id)
     {
-        //
+        $attendance = StudentAttendance::findOrFail($id);
+
+        assert($attendance instanceof StudentAttendance, "Expected a school instance to be returned but got {$attendance} instead!");
+
+        $attendance->delete();
+
+        return response(null);
     }
 }
