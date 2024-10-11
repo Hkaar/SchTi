@@ -6,7 +6,7 @@
 @php
 if (end($paths) === '') {
   array_pop($paths);
-}    
+}
 @endphp
 
 <nav aria-label="breadcrumb" class="flex items-center gap-2 min-w-fit">

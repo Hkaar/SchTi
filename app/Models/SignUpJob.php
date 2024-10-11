@@ -24,7 +24,7 @@ class SignUpJob extends Model
     protected $fillable = [
         'name',
     ];
-    
+
     /**
      * Define the relationship with family members / signup families
      */

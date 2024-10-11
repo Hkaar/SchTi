@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Log;
 use Laravel\Sanctum\HasApiTokens;
-use PhpParser\Node\Expr\Throw_;
 
 class User extends Authenticatable
 {
@@ -89,20 +88,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Checks the level of permission a user has
-     *
-     * @param  string|array<string>  $names
-     */
-    public function checkRole(string|array $names): bool
-    {
-        if (is_string($names)) {
-            return $this->role->name === $names;
-        }
-
-        return in_array($this->role->name, $names);
-    }
-
-    /**
      * Assigns a role to the user
      */
     public function assignRole(int|RoleEnum $role): bool
@@ -112,10 +97,12 @@ class User extends Authenticatable
 
             if (! $role) {
                 Log::error("Role with the id of {$role} does not exist!");
+
                 return false;
             }
 
             $this->roles()->attach($newRole->id);
+
             return true;
         }
 
@@ -123,27 +110,29 @@ class User extends Authenticatable
             $newRole = Role::where('id', '=', $role->value)->first();
 
             if (! $newRole) {
-                Log::error("Role with the id {$role} does not exist, did you perhaps forget to seed the db?");
+                Log::error("Role with the id {$role->value} does not exist, did you perhaps forget to seed the db?");
+
                 return false;
             }
 
             $this->roles()->attach($newRole->id);
+
             return true;
         }
     }
 
     /**
      * Check if a user has a role
-     * 
-     * @param RoleEnum|int|array<int, RoleEnum|int> $roles
+     *
+     * @param  RoleEnum|int|array<int, RoleEnum|int>  $roles
      */
     public function hasRole(RoleEnum|int|array $roles): bool
     {
-        if (!is_array($roles)) {
+        if (! is_array($roles)) {
             $roles = [$roles];
         }
 
-        $roleIds = array_map(function($role) {
+        $roleIds = array_map(function ($role) {
             return $role instanceof RoleEnum ? $role->value : $role;
         }, $roles);
 

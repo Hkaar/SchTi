@@ -33,8 +33,9 @@ class DetachRole extends Command
 
         $user = User::where('username', '=', $username)->first();
 
-        if (!$user instanceof User) {
+        if (! $user instanceof User) {
             $this->error("\nUser with the username {$username} does not exist, or did you perhaps forget to check it?\n");
+
             return 1;
         }
 
@@ -46,17 +47,20 @@ class DetachRole extends Command
 
         if (! $role) {
             $this->error("\nRole with the name {$roleName} does not exist, or did you perhaps forget to seed the db?\n");
+
             return 1;
         }
 
         if (! $user->hasRole($role->id)) {
             $this->error("\n{$username} doesn't have the role {$roleName} attached!\n");
+
             return 1;
         }
 
         $user->roles()->detach($role->id);
 
         $this->info("\n>> Successfully detached the role of {$roleName} from {$username}!\n");
+
         return 0;
     }
 }

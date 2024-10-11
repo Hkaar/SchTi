@@ -2,7 +2,8 @@
 
 namespace App\Enum;
 
-enum AttendanceStatusEnum: int {
+enum AttendanceStatusEnum: int
+{
     case Hadir = 1;
     case Sakit = 2;
     case Alpha = 3;

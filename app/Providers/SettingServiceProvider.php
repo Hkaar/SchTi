@@ -3,11 +3,9 @@
 namespace App\Providers;
 
 use App\Models\Setting;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Throwable;
 
 class SettingServiceProvider extends ServiceProvider
 {
@@ -26,10 +24,10 @@ class SettingServiceProvider extends ServiceProvider
     {
         try {
             $settings = $this->extractNested(Setting::all(['name', 'value'])->toArray());
-        } catch (\Throwable $th) {
+        } catch (Throwable $th) {
             $settings = [];
         }
-        
+
         View::share('settings', $settings);
     }
 

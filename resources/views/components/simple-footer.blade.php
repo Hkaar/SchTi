@@ -3,7 +3,7 @@
       <span class="font-semibold">
         Copyright &#169; 2024 SchTi. All rights reserved.
       </span>
-  
+
       <div class="flex items-center gap-2">
         <!-- Place socials logos here -->
       </div>

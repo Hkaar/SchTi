@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\FamilyStatus;
 use Illuminate\Http\Request;
 
 class FamilyStatusController extends Controller

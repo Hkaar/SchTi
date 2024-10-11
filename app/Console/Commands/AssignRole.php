@@ -33,8 +33,9 @@ class AssignRole extends Command
 
         $user = User::where('username', '=', $username)->first();
 
-        if (!$user instanceof User) {
+        if (! $user instanceof User) {
             $this->error("\nUser with the username {$username} does not exist, or did you perhaps forget to check it?\n");
+
             return 1;
         }
 
@@ -46,17 +47,20 @@ class AssignRole extends Command
 
         if (! $role) {
             $this->error("\nRole with the name {$roleName} does not exist, or did you perhaps forget to seed the db?\n");
+
             return 1;
         }
 
         if ($user->hasRole($role->id)) {
             $this->error("\n{$username} already has {$roleName} attached to them!");
+
             return 1;
         }
 
         $user->roles()->attach($role->id);
 
         $this->info("\n>> Successfully attached the role of {$roleName} to {$username}!\n");
+
         return 0;
     }
 }

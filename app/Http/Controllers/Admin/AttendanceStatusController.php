@@ -54,7 +54,7 @@ class AttendanceStatusController extends Controller
     public function update(Request $request, int $id)
     {
         $status = AttendanceStatus::findOrFail($id);
-        
+
         $validated = $request->validate([
             'name' => ['nullable', 'string', 'max:255', Rule::unique('attendance_statuses', 'name')->ignore($status->id)],
         ]);

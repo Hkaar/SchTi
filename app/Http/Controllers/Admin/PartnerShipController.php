@@ -126,7 +126,7 @@ class PartnerShipController extends Controller
         assert($partnership instanceof PartnerShip, "Expected a partnership instance to be returned but got {$partnership} instead!");
 
         $partnership->delete();
-        
+
         return response(null);
     }
 }
