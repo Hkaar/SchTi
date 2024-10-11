@@ -1,5 +1,6 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build"
@@ -17,6 +18,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "htmx.org": "^1.9.12",
+        "material-symbols": "^0.23.0",
         "preline": "^2.4.1"
     }
 }

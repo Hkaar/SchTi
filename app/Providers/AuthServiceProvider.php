@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+use App\Enum\RoleEnum;
+use App\Models\User;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,32 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Gate::define('admin', function (User $user) {
+            $user->hasRole(RoleEnum::Admin);
+        });
+
+        Gate::define('operator', function (User $user) {
+            $user->hasRole(RoleEnum::Operator);
+        });
+
+        Gate::define('headmaster', function (User $user) {
+            $user->hasRole(RoleEnum::Headmaster);
+        });
+
+        Gate::define('teacher', function (User $user) {
+            $user->hasRole(RoleEnum::Teacher);
+        });
+
+        Gate::define('student-counselor', function (User $user) {
+            $user->hasRole(RoleEnum::StudentCounselor);
+        });
+
+        Gate::define('student', function (User $user) {
+            $user->hasRole(RoleEnum::Student);
+        });
+
+        Gate::define('dashboard-access', function (User $user) {
+            $user->hasRole([RoleEnum::Admin, RoleEnum::Headmaster, RoleEnum::Operator, RoleEnum::StudentCounselor]);
+        });
     }
 }
