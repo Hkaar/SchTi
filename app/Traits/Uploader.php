@@ -5,8 +5,6 @@ namespace App\Traits;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Log;
 
-use function PHPSTORM_META\type;
-
 trait Uploader
 {
     /**
