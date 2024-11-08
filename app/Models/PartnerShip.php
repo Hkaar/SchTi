@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -28,4 +29,12 @@ class PartnerShip extends Model
         'address',
         'logo',
     ];
+
+    /**
+     * Scope a query strictly by the given email
+     */
+    public function scopeStrictByEmail(Builder $query, string $email) 
+    {
+        return $query->where('email', '=', $email);
+    } 
 }

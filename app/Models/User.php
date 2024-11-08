@@ -52,15 +52,16 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
+        'password' => 'hashed',
         'email_verified_at' => 'datetime',
     ];
 
     /**
      * Define the relationship with signups
      */
-    public function signups()
+    public function signup()
     {
-        return $this->hasMany(SignUp::class, 'user_id', 'id');
+        return $this->hasOne(SignUp::class, 'user_id', 'id');
     }
 
     /**
