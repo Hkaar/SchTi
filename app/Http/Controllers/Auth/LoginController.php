@@ -28,8 +28,9 @@ class LoginController extends Controller
         $credentials = $request->getCredentials();
 
         if (! Auth::validate($credentials)) {
-            return redirect()->to('login')
-                ->withErrors(trans('auth.failed'));
+            return back()->withErrors([
+                'username' => 'Data yang telah diberikan tidak sesuai dengan rekor kita',
+            ])->withInput();
         }
 
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
