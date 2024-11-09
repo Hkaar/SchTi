@@ -12,7 +12,7 @@
 
         <span class="text-gray-500">Temukan fasilitas yang tersedia di sekolah kami</span>
       </div>
-      
+
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-3">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6EwVzMBqw42YP8n_nyO9W0Sq_6XH5uOqA3wU1xBmdX_anXGr6UA8pjthYufzWe_t_vGbd7hmTihBpQSm2AUTN5XWRnE5PA5D3VQCWMlS37743P3fbfTnZRdkjM5f5Jf_LAsTEoO_Ij_EzAJYe5iYBK8JmIDGDlKQfpae2lTbaYhilrt-V-5zrrNhEi9p8/w640-h480/WhatsApp%20Image%202022-01-24%20at%2016.37.01(1).jpeg" alt="Gambar tidak dapat dimuatkan" class="block rounded size-full object-cover">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVMm-uQfamb6NhqwrtUGA8xD4OoNC52JCJDK1UxjQsw-FPrpg5xJL1HD8crSaKexCPE4BfuBWmDld7JCVIZu4iJvDO80bxySomN_ILiQpceXB5PE9Z0tSRY5ENWSG85WXh9nZ20U0fZuwmwo25dpzbHVzpYGMClMq1YM8d-VF16CukvQ1gR0A-f7MLmIVK/w640-h480/WhatsApp%20Image%202022-01-24%20at%2016.37.01(2).jpeg" alt="Gambar tidak dapat dimuatkan" class="block rounded-md size-full object-cover" />

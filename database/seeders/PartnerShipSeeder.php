@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\PartnerShip;
 use App\Traits\Uploader;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Http\UploadedFile;
 
@@ -20,7 +19,7 @@ class PartnerShipSeeder extends Seeder
         $partnerships = [
             [
                 'name' => 'Bank Fajar',
-                'logo' => 'bank-fajar.png'
+                'logo' => 'bank-fajar.png',
             ],
             [
                 'name' => 'Bisma Informatika',
@@ -65,8 +64,8 @@ class PartnerShipSeeder extends Seeder
 
     /**
      * Create partnerships based on a dataset
-     * 
-     * @param array<array<string>> $data
+     *
+     * @param  array<array<string>>  $data
      */
     private function createPartnerShips(array $data)
     {

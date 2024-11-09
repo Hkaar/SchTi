@@ -33,8 +33,8 @@ class PartnerShip extends Model
     /**
      * Scope a query strictly by the given email
      */
-    public function scopeStrictByEmail(Builder $query, string $email) 
+    public function scopeStrictByEmail(Builder $query, string $email)
     {
         return $query->where('email', '=', $email);
-    } 
+    }
 }

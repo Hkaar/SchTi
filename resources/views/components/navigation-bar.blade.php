@@ -56,7 +56,7 @@
                   <div class="py-1 md:px-1 space-y-0.5">
                     <x-dropdown-menu to="{{ $active === 'about' ? '#' : route('about') }}" :active="$active === 'about'">
                       <i class="material-symbols-outlined font-var-light">info</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Profil Sekolah</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Profil sekolah kami</p>
@@ -67,7 +67,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'about.facilities' ? '#' : route('about.facilities') }}" :active="$active === 'about.facilities'">
                       <i class="material-symbols-outlined font-var-light">business</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Fasilitas Sekolah</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Fasilitas yang tersedia di sekolah kami</p>
@@ -78,7 +78,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'about.majors' ? '#' : route('about.majors') }}" :active="$active === 'about.majors'">
                       <i class="material-symbols-outlined font-var-light">category</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kompetensi Keahlian</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Kompetensi keahlian yang tersedia di sekolah kami</p>
@@ -89,7 +89,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'about' ? '#' : route('about') }}" :active="$active === 'about.yayasan'">
                       <i class="material-symbols-outlined font-var-light">handshake</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Yayasan</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang yayasan yang menaungi sekolah</p>
@@ -100,7 +100,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'about.staff' ? '#' : route('about.staff') }}" :active="$active === 'about.staff'">
                       <i class="material-symbols-outlined font-var-light">group</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Managemen & Guru</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang staff & guru yang ada di sekolah</p>
@@ -111,7 +111,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'about.staff' ? '#' : route('about.staff') }}" :active="$active === 'about.staff'">
                       <i class="material-symbols-outlined font-var-light">account_tree</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Struktur Organisasi</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Struktur organisasi yang ada di sekolah</p>
@@ -135,7 +135,7 @@
                   <div class="py-1 md:px-1 space-y-0.5">
                     <x-dropdown-menu to="{{ $active === 'student-affairs.student-org' ? '#' : route('student-affairs.student-org') }}" :active="$active === 'student-affairs.student-org'">
                       <i class="material-symbols-outlined font-var-light">group</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">MPK & OSIS</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang MPK & OSIS di sekolah</p>
@@ -146,7 +146,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'student-affairs.awards' ? '#' : route('student-affairs.awards') }}" :active="$active === 'student-affairs.awards'">
                       <i class="material-symbols-outlined font-var-light">trophy</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Prestasi</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Prestasi yang didapatkan oleh sekolah kami</p>
@@ -157,7 +157,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'student-affairs' ? '#' : route('student-affairs') }}" :active="$active === 'student-affairs.loans'">
                       <i class="material-symbols-outlined font-var-light">money_bag</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Beasiswa</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang beasiswa terkait dengan sekolah</p>
@@ -168,7 +168,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'student-affairs.clubs' ? '#' : route('student-affairs.clubs') }}" :active="$active === 'student-affairs.clubs'">
                       <i class="material-symbols-outlined font-var-light">grid_view</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Ekstrakurikuler</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Ekstrakurikuler di sekolah kami</p>
@@ -179,7 +179,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'student-affairs.counsellor' ? '#' : route('student-affairs.counsellor') }}" :active="$active === 'student-affairs.counsellor'">
                       <i class="material-symbols-outlined font-var-light">account_balance</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Bimbingan Konseling</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Bimbingan konseling sekolah kami</p>
@@ -190,7 +190,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'student-affairs.counsellor' ? '#' : route('student-affairs.counsellor') }}" :active="$active === 'student-affairs.doc'">
                       <i class="material-symbols-outlined font-var-light">article</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Tata Tertib</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tata tertib yang berlaku di sekolah kami</p>
@@ -214,7 +214,7 @@
                   <div class="py-1 md:px-1 space-y-0.5">
                     <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.partnerships'">
                       <i class="material-symbols-outlined font-var-light">Handshake</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kerjasama</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Badan yang bekerja sama dengan sekolah kami</p>
@@ -225,18 +225,18 @@
 
                     <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.industry'">
                       <i class="material-symbols-outlined font-var-light">business</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Prakerin / PKL</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang program kerja lapangan yang ada di sekolah kami</p>
                       </div>
                     </x-dropdown-menu>
-                    
+
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
                     <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.trips'">
                       <i class="material-symbols-outlined font-var-light">map</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kunjungan Industri</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Kunjungan industri di sekolah kami</p>
@@ -247,7 +247,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.ppks'">
                       <i class="material-symbols-outlined font-var-light">grid_view</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">PPKS</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">PPKS di sekolah kami</p>
@@ -258,7 +258,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'public-relations.alumni' ? '#' : route('public-relations.alumni') }}" :active="$active === 'public-relations.alumni'">
                       <i class="material-symbols-outlined font-var-light">school</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Alumni</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Siswa alumni dari sekolah kami</p>
@@ -269,7 +269,7 @@
 
                     <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.doc'">
                       <i class="material-symbols-outlined font-var-light">article</i>
-                      
+
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Bursa Kerja Khusus</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Bursa kerja khusus di sekolah kami</p>
@@ -293,7 +293,7 @@
 
                 <svg class="hs-dropdown-open:rotate-180 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
               </button>
-            
+
               <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg mt-2 divide-y divide-gray-200 dark:bg-neutral-800 dark:border dark:border-neutral-700 dark:divide-neutral-700" role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-with-dividers">
                 <div class="p-1 space-y-0.5">
                   <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700" href="#">
@@ -317,7 +317,7 @@
 
           @guest
             <div class=" flex flex-wrap items-center gap-x-1.5">
-              <a class="py-[7px] px-2.5 inline-flex items-center font-medium text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 focus:outline-none focus:bg-gray-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" 
+              <a class="py-[7px] px-2.5 inline-flex items-center font-medium text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 focus:outline-none focus:bg-gray-100 dark:border-neutral-700 dark:text-neutral-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
                 href="{{ route('login') }}">
                 Masuk
               </a>

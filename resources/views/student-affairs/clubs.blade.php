@@ -3,7 +3,7 @@
 @section('title', 'Kesiswaan - Ekstrakurikuler')
 
 @section('content')
-  <x-navigation-bar active="student-affairs.clubs" />    
+  <x-navigation-bar active="student-affairs.clubs" />
 
   <x-footer />
 @endsection

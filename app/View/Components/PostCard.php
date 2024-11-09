@@ -10,8 +10,8 @@ class PostCard extends Component
 {
     /**
      * Create a new component instance.
-     * 
-     * @param array<string> $categories
+     *
+     * @param  array<string>  $categories
      */
     public function __construct(
         public array $categories,

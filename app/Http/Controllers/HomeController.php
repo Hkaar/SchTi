@@ -34,7 +34,7 @@ class HomeController extends Controller
 
     /**
      * Show the facilities page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function facilities()
@@ -44,7 +44,7 @@ class HomeController extends Controller
 
     /**
      * Show the majors page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function majors()
@@ -54,7 +54,7 @@ class HomeController extends Controller
 
     /**
      * Show the page containing school staff
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function staff()
@@ -72,7 +72,7 @@ class HomeController extends Controller
 
     /**
      * Show the alumni page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function alumni()
@@ -90,7 +90,7 @@ class HomeController extends Controller
 
     /**
      * Show the awards page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function awards()
@@ -100,7 +100,7 @@ class HomeController extends Controller
 
     /**
      * Show the club page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function clubs()
@@ -110,7 +110,7 @@ class HomeController extends Controller
 
     /**
      * Show the counsellor page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function counsellor()
@@ -120,7 +120,7 @@ class HomeController extends Controller
 
     /**
      * Show the student organizations page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function studentOrg()

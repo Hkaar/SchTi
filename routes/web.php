@@ -39,7 +39,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('student-org', 'HomeController@studentOrg')->name('student-affairs.student-org');
     });
 
-    Route::group(["middleware" => 'auth'], function () {
+    Route::group(['middleware' => 'auth'], function () {
         Route::get('home', 'HomeController@home')->name('home');
     });
 });

@@ -14,7 +14,7 @@ class SideImageCard extends Component
     public function __construct(
         public string $title,
         public string $src,
-        public string|null $to = null,
+        public ?string $to = null,
     ) {}
 
     /**
@@ -23,9 +23,9 @@ class SideImageCard extends Component
     public function render(): View|Closure|string
     {
         return view('components.side-image-card', [
-            'title'=> $this->title,
+            'title' => $this->title,
             'to' => $this->to,
-            'src' => $this->src, 
+            'src' => $this->src,
         ]);
     }
 }

@@ -46,14 +46,14 @@ class SettingSeeder extends Seeder
 
     /**
      * Create a settings key based on a set of data
-     * 
-     * @param array<string> $data
+     *
+     * @param  array<string>  $data
      */
-    private function createKey(string $name, array $data) 
+    private function createKey(string $name, array $data)
     {
         if (! Setting::StrictByName($name)->first()) {
             if (isset($data['type']) && $data['type'] === 'image') {
-                $file = new UploadedFile(database_path("seeders/images/" . $data['value']), $data['value']);
+                $file = new UploadedFile(database_path('seeders/images/' . $data['value']), $data['value']);
                 $filePath = $this->uploadImage($file);
 
                 Setting::create([

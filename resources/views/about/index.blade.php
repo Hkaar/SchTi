@@ -23,21 +23,21 @@
     <section id="profile-tab" class="min-h-[40rem] grid place-items-center" role="tabpanel" aria-labelledby="profile-item">
       <div class="container flex flex-col gap-5">
         <h3 class="text-3xl font-semibold">Tentang sekolah</h3>
-  
+
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div class="grid place-items-center">
             <img
               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtkJjeWSLxr2rO4NgFaL0o8-FMjV1dSNmYSvr7QbU3q-f2I_N0MuVs6HPJfuetyjZZhEhsDP2-M7au7T6WI_q3kbUhpJ7G161tHrlkJG6mMWf5zoA_gf8v6EiYPHF1PdNqxsz6lFkYZyfo/s640/Pendiri+ITB+Stikom+Bali+dan+SMK+TI+Bali+Global.jpg"
               alt="Gambar tidak dapat dimuatkan" class="block aspect-video rounded-md shadow-md">
           </div>
-  
+
           <div class="space-y-3 tracking-wide text-gray-500 leading-relaxed">
             <p>
               <span class="text-base-dark text-xl font-bold">SMK TI Bali Global Badung</span> adalah Sekolah Menengah Kejuruan yang
               berfokus pada bidang Teknologi Informasi (Komputer), yang saat ini berada di bawah naungan Yayasan
               Pendidikan Bali Global Denpasar.
             </p>
-  
+
             <p>
               SMK TI Bali Global didirikan oleh sekelompok pemerhati dan pecinta pendidikan, antara lain: Prof. Dr. I
               Made Bandem, M.A., Dr. Dadang Hermawan, Drs. I. B. Dharmadiaksa, M.Si., Ak., dan Drs. Made Subadi, M.Si.
@@ -45,7 +45,7 @@
               di berbagai sektor. Pada saat itu, sekolah yang mengkhususkan diri di bidang informatika dan komputer masih
               sangat jarang, terutama di Provinsi Bali.
             </p>
-  
+
             <p>
               Selain itu, SMK TI Bali Global didirikan sebagai upaya untuk mengantisipasi era informasi dan globalisasi,
               yang tentunya membutuhkan sumber daya manusia (SDM) yang kompeten di bidang teknologi informasi.
@@ -54,7 +54,7 @@
         </div>
       </div>
     </section>
-  
+
     <section id="vm-tab" class="min-h-[40rem] hidden" role="tabpanel" aria-labelledby="vm-item">
       <div class="container flex flex-col gap-5">
         <h3 class="text-3xl font-semibold">Visi Misi</h3>
@@ -62,7 +62,7 @@
         <div></div>
       </div>
     </section>
-  
+
     <section id="yayasan-tab" class="min-h-[40rem] hidden" role="tabpanel" aria-labelledby="yayasan-item">
       <div class="container flex flex-col gap-5">
         <h3 class="text-3xl font-semibold">Yayasan</h3>
@@ -112,7 +112,7 @@
         </div>
       </div>
     </section>
-  
+
     <section id="songs-tab" class="min-h-[40rem] hidden" role="tabpanel" aria-labelledby="songs-item">
       <div class="container flex flex-col gap-5">
         <h3 class="text-3xl font-semibold">Mars & Hymne</h3>
