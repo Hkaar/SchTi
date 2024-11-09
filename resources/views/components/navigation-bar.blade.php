@@ -1,4 +1,4 @@
-<header class="sticky top-0 flex flex-wrap  lg:justify-start lg:flex-nowrap z-50 w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700">
+<header {{ $attributes->twMerge(["class" => "sticky top-0 flex flex-wrap lg:justify-start lg:flex-nowrap z-50 w-full bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700"]) }}>
   <nav class="relative container w-full mx-auto lg:flex lg:items-center lg:justify-between lg:gap-3 py-3 px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center gap-x-2">
       <a class="flex items-center gap-3 font-bold text-xl text-black focus:outline-none focus:opacity-80 dark:text-white md:whitespace-nowrap" href="{{ auth()->check() ? route('home') : route('/') }}" aria-label="Brand">
@@ -33,7 +33,7 @@
                   Beranda
                 </a>
               @else
-                <a class="p-2 flex items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                <a class="p-2 flex items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="{{ route('/') }}">
                   <div class="grid place-items-center lg:hidden">
                     <i class="material-symbols-outlined font-var-light shrink-0">home</i>
                   </div>
@@ -54,69 +54,69 @@
 
                 <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative lg:w-80 hidden z-10 top-full md:bg-white lg:rounded-lg lg:shadow-md before:absolute before:-top-4 before:start-0 before:w-full before:h-5 dark:md:bg-neutral-800" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-base-mega-menu-small">
                   <div class="py-1 md:px-1 space-y-0.5">
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'about' ? '#' : route('about') }}" :active="$active === 'about'">
                       <i class="material-symbols-outlined font-var-light">info</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Profil Sekolah</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Profil sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
-                    
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+
+                    <x-dropdown-menu to="{{ $active === 'about.facilities' ? '#' : route('about.facilities') }}" :active="$active === 'about.facilities'">
                       <i class="material-symbols-outlined font-var-light">business</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Fasilitas Sekolah</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Fasilitas yang tersedia di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'about.majors' ? '#' : route('about.majors') }}" :active="$active === 'about.majors'">
                       <i class="material-symbols-outlined font-var-light">category</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kompetensi Keahlian</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Kompetensi keahlian yang tersedia di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'about' ? '#' : route('about') }}" :active="$active === 'about.yayasan'">
                       <i class="material-symbols-outlined font-var-light">handshake</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Yayasan</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang yayasan yang menaungi sekolah</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'about.staff' ? '#' : route('about.staff') }}" :active="$active === 'about.staff'">
                       <i class="material-symbols-outlined font-var-light">group</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Managemen & Guru</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang staff & guru yang ada di sekolah</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'about.staff' ? '#' : route('about.staff') }}" :active="$active === 'about.staff'">
                       <i class="material-symbols-outlined font-var-light">account_tree</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Struktur Organisasi</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Struktur organisasi yang ada di sekolah</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
                   </div>
                 </div>
               </div>
@@ -133,69 +133,69 @@
 
                 <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative lg:w-80 hidden z-10 top-full md:bg-white lg:rounded-lg lg:shadow-md before:absolute before:-top-4 before:start-0 before:w-full before:h-5 dark:md:bg-neutral-800" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-base-mega-menu-small">
                   <div class="py-1 md:px-1 space-y-0.5">
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs.student-org' ? '#' : route('student-affairs.student-org') }}" :active="$active === 'student-affairs.student-org'">
                       <i class="material-symbols-outlined font-var-light">group</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">MPK & OSIS</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang MPK & OSIS di sekolah</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs.awards' ? '#' : route('student-affairs.awards') }}" :active="$active === 'student-affairs.awards'">
                       <i class="material-symbols-outlined font-var-light">trophy</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Prestasi</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Prestasi yang didapatkan oleh sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs' ? '#' : route('student-affairs') }}" :active="$active === 'student-affairs.loans'">
                       <i class="material-symbols-outlined font-var-light">money_bag</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Beasiswa</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang beasiswa terkait dengan sekolah</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs.clubs' ? '#' : route('student-affairs.clubs') }}" :active="$active === 'student-affairs.clubs'">
                       <i class="material-symbols-outlined font-var-light">grid_view</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Ekstrakurikuler</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Ekstrakurikuler di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs.counsellor' ? '#' : route('student-affairs.counsellor') }}" :active="$active === 'student-affairs.counsellor'">
                       <i class="material-symbols-outlined font-var-light">account_balance</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Bimbingan Konseling</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Bimbingan konseling sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs.counsellor' ? '#' : route('student-affairs.counsellor') }}" :active="$active === 'student-affairs.doc'">
                       <i class="material-symbols-outlined font-var-light">article</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Tata Tertib</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tata tertib yang berlaku di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
                   </div>
                 </div>
               </div>
@@ -212,69 +212,69 @@
 
                 <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative lg:w-80 hidden z-10 top-full md:bg-white lg:rounded-lg lg:shadow-md before:absolute before:-top-4 before:start-0 before:w-full before:h-5 dark:md:bg-neutral-800" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-base-mega-menu-small">
                   <div class="py-1 md:px-1 space-y-0.5">
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.partnerships'">
                       <i class="material-symbols-outlined font-var-light">Handshake</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kerjasama</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Badan yang bekerja sama dengan sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.industry'">
                       <i class="material-symbols-outlined font-var-light">business</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Prakerin / PKL</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Tentang program kerja lapangan yang ada di sekolah kami</p>
                       </div>
-                    </a>
-
+                    </x-dropdown-menu>
+                    
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.trips'">
                       <i class="material-symbols-outlined font-var-light">map</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kunjungan Industri</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Kunjungan industri di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.ppks'">
                       <i class="material-symbols-outlined font-var-light">grid_view</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">PPKS</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">PPKS di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'public-relations.alumni' ? '#' : route('public-relations.alumni') }}" :active="$active === 'public-relations.alumni'">
                       <i class="material-symbols-outlined font-var-light">school</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Alumni</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Siswa alumni dari sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <a class="p-3 flex gap-x-4 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 rounded-lg dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" href="#">
+                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.doc'">
                       <i class="material-symbols-outlined font-var-light">article</i>
                       
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Bursa Kerja Khusus</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Bursa kerja khusus di sekolah kami</p>
                       </div>
-                    </a>
+                    </x-dropdown-menu>
                   </div>
                 </div>
               </div>

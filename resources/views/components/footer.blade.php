@@ -1,6 +1,6 @@
 <footer class="shadow-md border-t border-gray-200 dark:border-gray-800">
   <div class="container py-8">
-    <div class="flex items-start justify-between gap-8">
+    <div class="flex items-start flex-col lg:flex-row justify-between gap-8">
       <div class="flex flex-col gap-6 flex-1">
         <div class="flex flex-col gap-3">
           <h5 class="text-3xl font-bold">
@@ -13,7 +13,7 @@
         </div>
       </div>
   
-      <div class="flex justify-around flex-1">
+      <div class="flex flex-col lg:flex-row justify-around flex-1">
         <div class="flex flex-col gap-3">
           <h6 class="text-2xl font-semibold">Lebih lanjut</h6>
   
@@ -65,7 +65,7 @@
       </div>
 
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.678876848887!2d115.17926661113621!3d-8.626794987648948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd238b443f3470b%3A0xed54cf03e1904bf3!2sSMK%20TI%20Bali%20Global%20Badung!5e0!3m2!1sid!2sid!4v1728699290176!5m2!1sid!2sid" 
-        width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        width="290" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 
