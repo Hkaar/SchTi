@@ -40,6 +40,7 @@ RUN rm -rf /var/www/html
 # Copy application files to container
 COPY --chown=www-data:www-data . /var/www
 
+# Change permissions to www-data user
 RUN chown -R www-data:www-data /var/www
 
 RUN mkdir -p /var/www/.npm && chown -R 33:33 /var/www/.npm
