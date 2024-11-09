@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             AttendanceStatusSeeder::class,
             DistrictSeeder::class,
             SignUpJobSeeder::class,
+            PartnerShipSeeder::class,
         ]);
     }
 }

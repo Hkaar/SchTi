@@ -22,6 +22,8 @@ export default {
         'primary-dark': '#C2D8FF',
         'secondary-dark': '#79B2FF',
         'tertiary-dark': '#008DEE',
+        'base-light': '#fafafa',
+        'base-dark': '#101010'
       },
     },
   },

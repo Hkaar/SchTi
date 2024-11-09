@@ -6,13 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class NavigationBar extends Component
+class Testimony extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $active,
+        public string $user,
+        public string $occupation,
     ) {}
 
     /**
@@ -20,8 +21,9 @@ class NavigationBar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navigation-bar', [
-            'active' => $this->active,
+        return view('components.testimony', [
+            'user' => $this->user,
+            'occupation' => $this->occupation,
         ]);
     }
 }

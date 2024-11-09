@@ -6,13 +6,14 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class NavigationBar extends Component
+class DropdownMenu extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $active,
+        public string $to,
+        public bool $active = false,
     ) {}
 
     /**
@@ -20,7 +21,8 @@ class NavigationBar extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.navigation-bar', [
+        return view('components.dropdown-menu', [
+            'to' => $this->to,
             'active' => $this->active,
         ]);
     }
