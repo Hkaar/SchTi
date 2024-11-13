@@ -16,6 +16,8 @@ trait Uploader
      */
     public function uploadImage($file, array $options = [])
     {
+        $env = strtolower(config('app.env', 'production'));
+
         if (! $file instanceof UploadedFile) {
             Log::error('Cannot upload multiple files at once!');
 
@@ -23,7 +25,12 @@ trait Uploader
         }
 
         $folder = $options['folder'] ?? 'uploads';
-        $disk = $options['disk'] ?? 'public';
+
+        if ($env === 'production') {
+            $disk = $options['disk'] ?? 'supabase';
+        } else {
+            $disk = $options['disk'] ?? 'public';
+        }
 
         $name = $options['name'] ?? time() . '_' . $file->hashName();
         $path = $file->storeAs($folder, $name, $disk);
