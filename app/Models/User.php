@@ -107,19 +107,17 @@ class User extends Authenticatable
             return true;
         }
 
-        if ($role instanceof RoleEnum) {
-            $newRole = Role::where('id', '=', $role->value)->first();
+        $newRole = Role::where('id', '=', $role->value)->first();
 
-            if (! $newRole) {
-                Log::error("Role with the id {$role->value} does not exist, did you perhaps forget to seed the db?");
+        if (! $newRole) {
+            Log::error("Role with the id {$role->value} does not exist, did you perhaps forget to seed the db?");
 
-                return false;
-            }
-
-            $this->roles()->attach($newRole->id);
-
-            return true;
+            return false;
         }
+
+        $this->roles()->attach($newRole->id);
+
+        return true;
     }
 
     /**

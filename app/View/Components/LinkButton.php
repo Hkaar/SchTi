@@ -6,15 +6,13 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class Testimony extends Component
+class LinkButton extends Component
 {
     /**
      * Create a new component instance.
      */
     public function __construct(
-        public string $user,
-        public string $src,
-        public string $occupation,
+        public string $to,
     ) {}
 
     /**
@@ -22,10 +20,8 @@ class Testimony extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.testimony', [
-            'user' => $this->user,
-            'src' => $this->src,
-            'occupation' => $this->occupation,
+        return view('components.link-button', [
+            'to' => $this->to,
         ]);
     }
 }
