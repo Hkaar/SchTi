@@ -96,7 +96,7 @@ class User extends Authenticatable
         if (is_int($role)) {
             $newRole = Role::where('id', '=', $role)->first();
 
-            if (! $role) {
+            if (!$role) {
                 Log::error("Role with the id of {$role} does not exist!");
 
                 return false;
@@ -107,21 +107,17 @@ class User extends Authenticatable
             return true;
         }
 
-        if ($role instanceof RoleEnum) {
-            $newRole = Role::where('id', '=', $role->value)->first();
+        $newRole = Role::where('id', '=', $role->value)->first();
 
-            if (! $newRole) {
-                Log::error("Role with the id {$role->value} does not exist, did you perhaps forget to seed the db?");
+        if (!$newRole) {
+            Log::error("Role with the id {$role->value} does not exist, did you perhaps forget to seed the db?");
 
-                return false;
-            }
-
-            $this->roles()->attach($newRole->id);
-
-            return true;
+            return false;
         }
 
-        return false;
+        $this->roles()->attach($newRole->id);
+
+        return true;
     }
 
     /**
@@ -131,7 +127,7 @@ class User extends Authenticatable
      */
     public function hasRole(RoleEnum|int|array $roles): bool
     {
-        if (! is_array($roles)) {
+        if (!is_array($roles)) {
             $roles = [$roles];
         }
 
