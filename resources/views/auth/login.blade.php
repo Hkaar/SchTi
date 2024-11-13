@@ -6,15 +6,15 @@
   <div class="min-h-screen flex">
     <div class="container grid place-items-center flex-1">
       <div class="flex flex-col items-center gap-5">
-        <div class="flex items-center justify-center gap-3">
+        <a href="{{ route('/') }}" class="flex flex-col items-center justify-center gap-3">
           @if (isset($settings['org_logo']))
-            <img src="{{ Storage::url($settings['org_logo']) }}" class="size-12 aspect-square object-contain inline-block">
+            <img src="{{ Storage::url($settings['org_logo']) }}" class="size-12 lg:size-28 aspect-square object-contain inline-block">
           @endif
 
-          <a href="{{ route('/') }}" class="font-bold text-primary text-3xl">
+          <span class="font-bold text-primary text-3xl text-center">
             {{ isset($settings['org_name']) ? $settings['org_name'] : 'Brand' }}
-          </a>
-        </div>
+          </span>
+        </a>
 
         <div class="px-2">
           <form action="{{ route('login.handle') }}" method="post" class="flex flex-col gap-6 px-8 py-6 shadow-md border rounded-lg w-full">
