@@ -5,11 +5,11 @@
 @section('content')
   <x-navigation-bar active="/"></x-navigation-bar>
 
-  <section id="hero" class="flex min-h-[50rem]">
+  <section id="hero" class="flex min-h-[38rem] lg:min-h-[48rem]">
     <div class="container flex flex-1 items-center justify-between gap-6">
       <div class="flex flex-1 flex-col gap-8">
         <div class="flex flex-col gap-4">
-          <h1 class="text-7xl font-bold tracking-tight">
+          <h1 class="text-6xl lg:text-7xl font-bold tracking-tight">
             {{ isset($settings['org_name']) ? $settings['org_name'] : 'Brand' }}
           </h1>
 
@@ -19,21 +19,19 @@
         </div>
 
         <div class="flex items-center gap-2">
-          <a href="#"
-            class="btn flex w-fit items-center gap-1 rounded-md bg-primary py-2 pe-1 ps-3 font-semibold text-base-light shadow-lg transition-all duration-200 hover:scale-105 active:scale-95 active:opacity-50">
-            Ayo daftar sekarang
+          <x-link-button to="#" class="border-tertiary text-base-dark bg-transparent hover:bg-tertiary border-2 hover:text-base-light py-3 px-4">
+            Mau tau lebih lanjut ?
+          </x-link-button>
 
-            <i class="material-symbols-outlined font-var-light">chevron_right</i>
-          </a>
+          <x-link-button to="#" class="bg-primary py-3 pe-3 ps-4">
+            Daftar Sekarang
 
-          <a href="#"
-            class="btn w-fit rounded-md border-2 border-tertiary px-3 py-2 font-semibold shadow-sm transition-all duration-200 hover:scale-105 hover:bg-tertiary hover:text-base-light active:scale-95 active:opacity-50">
-            Mau tau lebih lanjut?
-          </a>
+            <i class="material-symbols-outlined font-var-light">arrow_right_alt</i>
+          </x-link-button>
         </div>
       </div>
 
-      <div class="grid flex-1 place-items-center">
+      <div class="lg:grid flex-1 place-items-center hidden">
         <img src="{{ Vite::asset('resources/images/logo.png') }}" alt="Gambar tidak dapat dimuatkan"
           class="size-3/4 block aspect-square object-contain">
       </div>
@@ -43,14 +41,14 @@
   <section id="reasons" class="py-16">
     <div class="container flex flex-col items-center gap-12">
       <div class="flex flex-col gap-5 text-center">
-        <h3 class="text-6xl font-bold">Mengapa memilih kita?</h3>
+        <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold">Mengapa memilih kita?</h3>
 
         <p class="text-lg font-medium tracking-wide text-gray-400">
           Mengapa memilih SMK TI Bali Global Badung dibandingkan sekolah lain?
         </p>
       </div>
 
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         <x-card class="border-l-8 border-l-secondary gap-3">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">handshake</i>
@@ -132,7 +130,7 @@
   <section id="majors" class="py-16">
     <div class="container flex flex-col items-center gap-12">
       <div class="flex flex-col gap-3 text-center">
-        <h3 class="text-6xl font-bold">
+        <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold">
           Kompetensi Keahlian
         </h3>
 
@@ -172,7 +170,7 @@
   <section id="posts" class="py-16">
     <div class="container flex flex-col items-center gap-12">
       <div class="flex flex-col gap-3 text-center">
-        <h3 class="text-6xl font-bold">
+        <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold">
           Kegiatan terkini
         </h3>
 
@@ -214,11 +212,10 @@
       </div>
 
       <div class="flex items-center justify-center">
-        <a href="#"
-          class="btn flex w-fit items-center gap-2 bg-secondary px-4 py-3 text-base-light duration-150 ease-in-out hover:scale-105 active:scale-90 active:opacity-50">
+        <x-link-button to="#" class="bg-secondary">
           Lihat postingan lain
-          <i class="material-symbols-outlined font-var-light">keyboard_double_arrow_right</i>
-        </a>
+          <i class="material-symbols-outlined font-var-light">arrow_right_alt</i>
+        </x-link-button>
       </div>
     </div>
   </section>
@@ -226,7 +223,7 @@
   <section id="testimonies" class="py-16">
     <div class="container flex flex-col items-center gap-12">
       <div class="flex flex-col gap-3 text-center">
-        <h3 class="text-6xl font-bold">
+        <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold">
           Testimoni
         </h3>
 
@@ -235,18 +232,27 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <x-testimony user="Hatta Afdillah Syahfar" occupation="Alumni Berprestasi">
-          Tempat saya mengembangkan passion di bidang IT. Sukses selalu untuk Globaliti Badung!
-        </x-testimony>
-
-        <x-testimony user="Muqoroba Lada Sattar" occupation="Alumni Berprestasi">
-          Teori dibutuhkan, tetapi skill yang menentukan. Pelajari itu semua di SMK TI Bali Global Badung
-        </x-testimony>
-
-        <x-testimony user="Gusti Ayu Putu Kesari Purnama Yani" occupation="Alumni Berprestasi">
-          Budi pekerti dan agama dikedepankan sehingga bisa melahirkan generasi berpengetahuan sekaligus berbudi luhur
-        </x-testimony>
+      <div class="flex flex-col gap-4 items-center">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <x-testimony user="Hatta Afdillah Syahfar" occupation="Alumni Berprestasi">
+            Tempat saya mengembangkan passion di bidang IT. Sukses selalu untuk Globaliti Badung!
+          </x-testimony>
+  
+          <x-testimony user="Muqoroba Lada Sattar" occupation="Alumni Berprestasi">
+            Teori dibutuhkan, tetapi skill yang menentukan. Pelajari itu semua di SMK TI Bali Global Badung
+          </x-testimony>
+  
+          <x-testimony user="Gusti Ayu Putu Kesari Purnama Yani" occupation="Alumni Berprestasi">
+            Budi pekerti dan agama dikedepankan sehingga bisa melahirkan generasi berpengetahuan sekaligus berbudi luhur
+          </x-testimony>
+        </div>
+  
+        <div class="flex items-center justify-center">
+          <x-link-button to="#" class="bg-secondary">
+            Lihat testimoni lain
+            <i class="material-symbols-outlined font-var-light">arrow_right_alt</i>
+          </x-link-button>
+        </div>
       </div>
     </div>
   </section>
