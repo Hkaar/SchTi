@@ -20,20 +20,20 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/', 'HomeController@about')->name('about');
         Route::get('facilities', 'HomeController@facilities')->name('about.facilities');
         Route::get('majors', 'HomeController@majors')->name('about.majors');
-        Route::get('yayasan','HomeController@yayasan')->name('about.yayasan');
+        Route::get('yayasan', 'HomeController@yayasan')->name('about.yayasan');
         Route::get('staff', 'HomeController@staff')->name('about.staff');
     });
 
     Route::prefix('curriculum')->group(function () {
-        Route::get('subjects','HomeController@subjects')->name('curriculum.subjects');
-        Route::get('schedule','HomeController@schedule')->name('curriculum.schedule');
+        Route::get('subjects', 'HomeController@subjects')->name('curriculum.subjects');
+        Route::get('schedule', 'HomeController@schedule')->name('curriculum.schedule');
     });
 
     Route::prefix('public-relations')->group(function () {
         Route::get('/', 'HomeController@publicRelations')->name('public-relations');
         Route::get('alumni', 'HomeController@alumni')->name('public-relations.alumni');
-        Route::get('partnerships','HomeController@partnerships')->name('public-relations.partnerships');
-        Route::get('industry','HomeController@industry')->name('public-relations.industry');
+        Route::get('partnerships', 'HomeController@partnerships')->name('public-relations.partnerships');
+        Route::get('industry', 'HomeController@industry')->name('public-relations.industry');
     });
 
     Route::prefix('student-affairs')->group(function () {

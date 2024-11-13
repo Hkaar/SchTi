@@ -54,6 +54,7 @@ class HomeController extends Controller
 
     /**
      * Show the yayasan page
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function yayasan()
@@ -139,7 +140,7 @@ class HomeController extends Controller
 
     /**
      * Show the curriculum schedule page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function schedule()
@@ -149,7 +150,7 @@ class HomeController extends Controller
 
     /**
      * Show the curriculum subjects page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function subjects()
@@ -159,7 +160,7 @@ class HomeController extends Controller
 
     /**
      * Show the industry page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function industry()
@@ -169,7 +170,7 @@ class HomeController extends Controller
 
     /**
      * Show the partnerships page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function partnerships()

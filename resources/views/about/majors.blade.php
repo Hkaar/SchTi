@@ -45,7 +45,7 @@
                 Kompetensi Keahlian ini akan membawa peserta didik menguasai Stand Alone Programming sampai Multi User
                 Programming serta Web Programming.
               </p>
-  
+
               <p class="leading-relaxed tracking-wide">
                 Lulusan Pengembangan Perangkat Lunak dan Game mampu untuk profesi sebagai
                 Programmer, Software Developer, Cyber Security Analyst, Data Scientist, SEO Specialist, Database
@@ -73,7 +73,7 @@
                 ilustration, digital imaging, web design, serta mampu mengoperasikan software dan periferal digital audio,
                 digital video, dan visual effect.
               </p>
-  
+
               <p class="leading-relaxed tracking-wide">
                 Lulusan Desain Komunikasi Visual mampu untuk menjadi profesi sebagai Web
                 Developer, Game Developer, Production House Media, dan Advertisment
@@ -92,7 +92,7 @@
                 dan mengembangkan operasi bisnis seperti memadukan kecerdasan teknologi dengan cara kita berbisnis
                 sehari-hari.
               </p>
-  
+
               <p class="leading-relaxed tracking-wide">
                 Lulusan dari jurusan Bisnis Digital mampu untuk profesi sebagai Manajer Pemasaran Digital, Spesialis
                 E-Commerce, Analisis Data Bisnis, Wirausaha Digital, Manajer Hubungan Pelanggan Digital, Spesialis Keuangan

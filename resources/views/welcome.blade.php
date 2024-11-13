@@ -237,16 +237,16 @@
           <x-testimony user="Hatta Afdillah Syahfar" occupation="Alumni Berprestasi">
             Tempat saya mengembangkan passion di bidang IT. Sukses selalu untuk Globaliti Badung!
           </x-testimony>
-  
+
           <x-testimony user="Muqoroba Lada Sattar" occupation="Alumni Berprestasi">
             Teori dibutuhkan, tetapi skill yang menentukan. Pelajari itu semua di SMK TI Bali Global Badung
           </x-testimony>
-  
+
           <x-testimony user="Gusti Ayu Putu Kesari Purnama Yani" occupation="Alumni Berprestasi">
             Budi pekerti dan agama dikedepankan sehingga bisa melahirkan generasi berpengetahuan sekaligus berbudi luhur
           </x-testimony>
         </div>
-  
+
         <div class="flex items-center justify-center">
           <x-link-button to="#" class="bg-secondary">
             Lihat testimoni lain
