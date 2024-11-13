@@ -1,9 +1,9 @@
 <div class="flex flex-col shadow-md rounded-md">
   <div class="flex-1">
-    <img src="https://placehold.co/600x400" alt="Gambar tidak tersedia" class="block object-cover max-w-full max-h-full rounded-t-md">
+    <img src="{{ isset($src) ? $src : 'https://placehold.co/600x400' }}" alt="Gambar tidak tersedia" class="block object-cover size-full max-h-72 rounded-t-md">
   </div>
 
-  <div class="flex-1 flex flex-col gap-5 px-4 py-3">
+  <div class="flex-1 flex flex-col gap-4 px-4 py-3">
     <div class="flex items-center gap-2 flex-wrap">
       @foreach ($categories as $item)
         <div class="grid place-items-center px-2 py-1 rounded-md border shadow">
@@ -13,7 +13,7 @@
     </div>
 
     <div class="flex flex-col gap-3">
-      <h6 class="text-xl font-bold">
+      <h6 class="text-xl font-bold line-clamp-2">
         {{ $title }}
       </h6>
 

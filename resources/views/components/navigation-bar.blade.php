@@ -87,7 +87,7 @@
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <x-dropdown-menu to="{{ $active === 'about' ? '#' : route('about') }}" :active="$active === 'about.yayasan'">
+                    <x-dropdown-menu to="{{ $active === 'about.yayasan' ? '#' : route('about.yayasan') }}" :active="$active === 'about.yayasan'">
                       <i class="material-symbols-outlined font-var-light">handshake</i>
 
                       <div class="grow">
@@ -115,6 +115,41 @@
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Struktur Organisasi</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Struktur organisasi yang ada di sekolah</p>
+                      </div>
+                    </x-dropdown-menu>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hs-dropdown [--strategy:static] lg:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] lg:[--is-collapse:false] ">
+                <button id="hs-header-base-mega-menu-small" type="button" class="hs-dropdown-toggle w-full p-2 flex items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
+                  <div class="grid place-items-center lg:hidden">
+                    <i class="material-symbols-outlined font-var-light">book_ribbon</i>
+                  </div>
+
+                  Kurikulum
+                  <svg class="hs-dropdown-open:-rotate-180 lg:hs-dropdown-open:rotate-0 duration-300 shrink-0 size-4 ms-auto lg:ms-0" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+
+                <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative lg:w-80 hidden z-10 top-full md:bg-white lg:rounded-lg lg:shadow-md before:absolute before:-top-4 before:start-0 before:w-full before:h-5 dark:md:bg-neutral-800" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-base-mega-menu-small">
+                  <div class="py-1 md:px-1 space-y-0.5">
+                    <x-dropdown-menu to="{{ $active === 'curriculum.subjects' ? '#' : route('curriculum.subjects') }}" :active="$active === 'curriculum.subjects'">
+                      <i class="material-symbols-outlined font-var-light">bookmarks</i>
+
+                      <div class="grow">
+                        <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Mata Pelajaran</span>
+                        <p class="text-sm text-gray-500 dark:text-neutral-500">Mata pelajaran yang ada di sekolah kami</p>
+                      </div>
+                    </x-dropdown-menu>
+
+                    <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
+
+                    <x-dropdown-menu to="{{ $active === 'curriculum.schedule' ? '#' : route('curriculum.schedule') }}" :active="$active === 'curriculum.schedule'">
+                      <i class="material-symbols-outlined font-var-light">calendar_month</i>
+
+                      <div class="grow">
+                        <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Jadwal Pembelajaran</span>
+                        <p class="text-sm text-gray-500 dark:text-neutral-500">Jadwal pembelajaran yang diikuti oleh sekolah kami</p>
                       </div>
                     </x-dropdown-menu>
                   </div>
@@ -212,7 +247,7 @@
 
                 <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 relative lg:w-80 hidden z-10 top-full md:bg-white lg:rounded-lg lg:shadow-md before:absolute before:-top-4 before:start-0 before:w-full before:h-5 dark:md:bg-neutral-800" role="menu" aria-orientation="vertical" aria-labelledby="hs-header-base-mega-menu-small">
                   <div class="py-1 md:px-1 space-y-0.5">
-                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.partnerships'">
+                    <x-dropdown-menu to="{{ $active === 'public-relations.partnerships' ? '#' : route('public-relations.partnerships') }}" :active="$active === 'public-relations.partnerships'">
                       <i class="material-symbols-outlined font-var-light">Handshake</i>
 
                       <div class="grow">
@@ -223,7 +258,7 @@
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.industry'">
+                    <x-dropdown-menu to="{{ $active === 'public-relations.industry' ? '#' : route('public-relations.industry') }}" :active="$active === 'public-relations.industry'">
                       <i class="material-symbols-outlined font-var-light">business</i>
 
                       <div class="grow">
@@ -240,17 +275,6 @@
                       <div class="grow">
                         <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">Kunjungan Industri</span>
                         <p class="text-sm text-gray-500 dark:text-neutral-500">Kunjungan industri di sekolah kami</p>
-                      </div>
-                    </x-dropdown-menu>
-
-                    <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
-
-                    <x-dropdown-menu to="{{ $active === 'public-relations' ? '#' : route('public-relations') }}" :active="$active === 'public-relations.ppks'">
-                      <i class="material-symbols-outlined font-var-light">grid_view</i>
-
-                      <div class="grow">
-                        <span class="block font-semibold text-sm text-gray-800 dark:text-neutral-200">PPKS</span>
-                        <p class="text-sm text-gray-500 dark:text-neutral-500">PPKS di sekolah kami</p>
                       </div>
                     </x-dropdown-menu>
 

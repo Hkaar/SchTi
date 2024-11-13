@@ -26,31 +26,31 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         Gate::define('admin', function (User $user) {
-            $user->hasRole(RoleEnum::Admin);
+            return $user->hasRole(RoleEnum::Admin);
         });
 
         Gate::define('operator', function (User $user) {
-            $user->hasRole(RoleEnum::Operator);
+            return $user->hasRole(RoleEnum::Operator);
         });
 
         Gate::define('headmaster', function (User $user) {
-            $user->hasRole(RoleEnum::Headmaster);
+            return $user->hasRole(RoleEnum::Headmaster);
         });
 
         Gate::define('teacher', function (User $user) {
-            $user->hasRole(RoleEnum::Teacher);
+            return $user->hasRole(RoleEnum::Teacher);
         });
 
         Gate::define('student-counselor', function (User $user) {
-            $user->hasRole(RoleEnum::StudentCounselor);
+            return $user->hasRole(RoleEnum::StudentCounselor);
         });
 
         Gate::define('student', function (User $user) {
-            $user->hasRole(RoleEnum::Student);
+            return $user->hasRole(RoleEnum::Student);
         });
 
         Gate::define('dashboard-access', function (User $user) {
-            $user->hasRole([RoleEnum::Admin, RoleEnum::Headmaster, RoleEnum::Operator, RoleEnum::StudentCounselor]);
+            return $user->hasRole([RoleEnum::Admin, RoleEnum::Headmaster, RoleEnum::Operator, RoleEnum::StudentCounselor]);
         });
     }
 }
