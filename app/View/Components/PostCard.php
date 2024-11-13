@@ -18,7 +18,7 @@ class PostCard extends Component
         public string $title,
         public string $user,
         public string $date,
-        public string|null $src = null,
+        public ?string $src = null,
     ) {}
 
     /**
@@ -29,7 +29,7 @@ class PostCard extends Component
         return view('components.post-card', [
             'categories' => $this->categories,
             'title' => $this->title,
-            'src'=> $this->src,
+            'src' => $this->src,
             'user' => $this->user,
             'date' => $this->date,
         ]);
