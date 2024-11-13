@@ -13,12 +13,12 @@
         </div>
       </div>
 
-      <div class="flex flex-col lg:flex-row justify-around flex-1">
+      <div class="flex-1 grid grid-cols-1 lg:grid-cols-2">
         <div class="flex flex-col gap-3">
           <h6 class="text-2xl font-semibold">Lebih lanjut</h6>
 
           <div class="flex flex-col gap-2">
-            <a href="#" class="text-gray-400">Pendaftaran Siswa Baru</a>
+            <a href="#" class="text-gray-400">Pendaftaran</a>
             <a href="#" class="text-gray-400">Kegiatan Sekolah</a>
             <a href="#" class="text-gray-400">Kalender Kegiatan</a>
             <a href="#" class="text-gray-400">Kontak Kami</a>
