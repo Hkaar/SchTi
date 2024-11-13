@@ -16,21 +16,26 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::get('/', 'HomeController@welcome')->name('/');
 
-    // About Section
     Route::prefix('about')->group(function () {
         Route::get('/', 'HomeController@about')->name('about');
         Route::get('facilities', 'HomeController@facilities')->name('about.facilities');
         Route::get('majors', 'HomeController@majors')->name('about.majors');
+        Route::get('yayasan','HomeController@yayasan')->name('about.yayasan');
         Route::get('staff', 'HomeController@staff')->name('about.staff');
     });
 
-    // Public Relations Section
+    Route::prefix('curriculum')->group(function () {
+        Route::get('subjects','HomeController@subjects')->name('curriculum.subjects');
+        Route::get('schedule','HomeController@schedule')->name('curriculum.schedule');
+    });
+
     Route::prefix('public-relations')->group(function () {
         Route::get('/', 'HomeController@publicRelations')->name('public-relations');
         Route::get('alumni', 'HomeController@alumni')->name('public-relations.alumni');
+        Route::get('partnerships','HomeController@partnerships')->name('public-relations.partnerships');
+        Route::get('industry','HomeController@industry')->name('public-relations.industry');
     });
 
-    // Student Affairs Section
     Route::prefix('student-affairs')->group(function () {
         Route::get('/', 'HomeController@studentAffairs')->name('student-affairs');
         Route::get('awards', 'HomeController@awards')->name('student-affairs.awards');

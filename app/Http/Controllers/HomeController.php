@@ -53,6 +53,15 @@ class HomeController extends Controller
     }
 
     /**
+     * Show the yayasan page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function yayasan()
+    {
+        return view('about.yayasan');
+    }
+
+    /**
      * Show the page containing school staff
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
@@ -126,5 +135,45 @@ class HomeController extends Controller
     public function studentOrg()
     {
         return view('student-affairs.student-org');
+    }
+
+    /**
+     * Show the curriculum schedule page
+     * 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function schedule()
+    {
+        return view('curriculum.schedule');
+    }
+
+    /**
+     * Show the curriculum subjects page
+     * 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function subjects()
+    {
+        return view('curriculum.subjects');
+    }
+
+    /**
+     * Show the industry page
+     * 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function industry()
+    {
+        return view('public-relations.industry');
+    }
+
+    /**
+     * Show the partnerships page
+     * 
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function partnerships()
+    {
+        return view('public-relations.partnerships');
     }
 }
