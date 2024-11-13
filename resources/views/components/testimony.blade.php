@@ -6,7 +6,7 @@
   </div>
 
   <div class="flex items-center gap-4 border-t-2 py-4 px-6 h-fit">
-    <img src="https://placehold.co/600x400" alt="Gambar tidak dapat dimuatkan" class="size-14 rounded-full object-cover">
+    <img src="{{ $src }}" alt="Gambar tidak dapat dimuatkan" class="size-14 rounded-full object-cover">
 
     <div class="flex flex-col gap-1 justify-center">
       <span class="font-medium tracking-wide">

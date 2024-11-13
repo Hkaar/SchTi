@@ -13,6 +13,7 @@ class Testimony extends Component
      */
     public function __construct(
         public string $user,
+        public string $src,
         public string $occupation,
     ) {}
 
@@ -23,6 +24,7 @@ class Testimony extends Component
     {
         return view('components.testimony', [
             'user' => $this->user,
+            'src' => $this->src,
             'occupation' => $this->occupation,
         ]);
     }
