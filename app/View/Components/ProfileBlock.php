@@ -23,9 +23,9 @@ class ProfileBlock extends Component
     public function render(): View|Closure|string
     {
         return view('components.profile-block', [
-            'src'=> $this->src,
-            'name'=> $this->name,
-            'job'=> $this->job,
+            'src' => $this->src,
+            'name' => $this->name,
+            'job' => $this->job,
         ]);
     }
 }

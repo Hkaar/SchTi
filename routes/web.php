@@ -22,7 +22,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('majors', 'HomeController@majors')->name('about.majors');
         Route::get('yayasan', 'HomeController@yayasan')->name('about.yayasan');
         Route::get('staff', 'HomeController@staff')->name('about.staff');
-        Route::get('structure','HomeController@structure')->name('about.structure');
+        Route::get('structure', 'HomeController@structure')->name('about.structure');
     });
 
     Route::prefix('curriculum')->group(function () {

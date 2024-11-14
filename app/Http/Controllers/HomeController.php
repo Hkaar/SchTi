@@ -180,7 +180,7 @@ class HomeController extends Controller
 
     /**
      * Show the loans page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function loans()
@@ -190,7 +190,7 @@ class HomeController extends Controller
 
     /**
      * Show the structure page
-     * 
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
      */
     public function structure()

@@ -17,7 +17,7 @@
           <x-profile-block src="{{ Vite::asset('resources/images/staff/made.png') }}" name="I Made Dwi Adnyana, SH" job="Waka Sapras" />
           <x-profile-block src="{{ Vite::asset('resources/images/staff/dayu-ari.png') }}" name="Ida Ayu Made Ari Widyawati, S.Pd.H" job="Waka Humas" />
           <x-profile-block src="{{ Vite::asset('resources/images/staff/darma.png') }}" name="I Gede Made Darma Wiguna, S.Pd" job="Waka Kesiswaan" />
-          
+
           <x-profile-block src="{{ Vite::asset('resources/images/staff/bagas.png') }}" name="Bagas Alif Rizkianto, S.Kom" job="Kaprog DKV" />
           <x-profile-block src="{{ Vite::asset('resources/images/staff/ade.png') }}" name="Putu Ade Pranata, S.Kom" job="Kaprog PPLG" />
           <x-profile-block src="{{ Vite::asset('resources/images/staff/bagus.png') }}" name="I Gede Bagus Ardiyana Irawan, S.Kom" job="Kaprog TJKT" />
