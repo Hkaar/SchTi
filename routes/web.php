@@ -22,6 +22,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('majors', 'HomeController@majors')->name('about.majors');
         Route::get('yayasan', 'HomeController@yayasan')->name('about.yayasan');
         Route::get('staff', 'HomeController@staff')->name('about.staff');
+        Route::get('structure','HomeController@structure')->name('about.structure');
     });
 
     Route::prefix('curriculum')->group(function () {
@@ -40,6 +41,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('/', 'HomeController@studentAffairs')->name('student-affairs');
         Route::get('awards', 'HomeController@awards')->name('student-affairs.awards');
         Route::get('clubs', 'HomeController@clubs')->name('student-affairs.clubs');
+        Route::get('loans', 'HomeController@loans')->name('student-affairs.loans');
         Route::get('counsellor', 'HomeController@counsellor')->name('student-affairs.counsellor');
         Route::get('student-org', 'HomeController@studentOrg')->name('student-affairs.student-org');
     });
