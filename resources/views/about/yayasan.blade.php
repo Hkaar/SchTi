@@ -11,83 +11,14 @@
         <h3 class="border-b border-gray-200 px-6 py-7 text-3xl font-bold text-primary">Yayasan Pendidikan Bali Global
           Denpasar</h3>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/Prof. Dr. I Made Bandem, M.A.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              Prof. Dr. I Made Bandem, M.A <br>
-              (Pembina 1)
-            </p>
-          </div>
-
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/Drs. I Gusti Ngurah Oka.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              Drs. I Gusti Ngurah Oka <br>
-              (Pembina 2)
-            </p>
-          </div>
-
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/Drs. Ida Bagus Anom, M.Pd.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              Drs. Ida Bagus Anom, M.Pd <br>
-              (Pembina 3)
-            </p>
-          </div>
-
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/Drs. Ida Bagus Dharmadiaksa, Ak, M.Si.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              Drs. Ida Bagus Dharmadiaksa, Ak, M.Si<br>
-              (Pengawas)
-            </p>
-          </div>
-
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/Dr. Dadang Hermawan.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              Dr. Dadang Hermawan <br>
-              (Ketua)
-            </p>
-          </div>
-
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/Drs. I Gusti Made Murjana, M.Pd.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              Drs. I Gusti Made Murjana, M.Pd<br>
-              (Sekretaris)
-            </p>
-          </div>
-
-          <div class="relative border-b odd:border-r border-gray-200">
-            <img src="{{ Vite::asset('resources/images/yayasan/I Gusti Ngurah Wardana, S.Pt., MM.Kom.png') }}"
-              alt="Gambar tidak dapat dimuatkan" class="size-full peer aspect-square object-contain" />
-
-            <p
-              class="absolute left-0 top-0 z-10 hidden size-full place-items-center backdrop-blur-md bg-black bg-opacity-20 py-2 text-center text-white hover:grid peer-hover:grid">
-              I Gusti Ngurah Wardana, S.Pt., MM.Kom<br>
-              (Bendahara)
-            </p>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/Prof. Dr. I Made Bandem, M.A.png') }}" name="Prof. Dr. I Made Bandem, M.A" job="Pembina 1" />
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/Drs. I Gusti Ngurah Oka.png') }}" name="Drs. I Gusti Ngurah Oka" job="Pembina 2" />
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/Drs. Ida Bagus Anom, M.Pd.png') }}" name="Drs. Ida Bagus Anom, M.Pd" job="Pembina 3" />
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/Drs. Ida Bagus Dharmadiaksa, Ak, M.Si.png') }}" name="Drs. Ida Bagus Dharmadiaksa, Ak, M.Si" job="Pengawas" />
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/Dr. Dadang Hermawan.png') }}" name="Dr. Dadang Hermawan" job="Ketua" />
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/Drs. I Gusti Made Murjana, M.Pd.png') }}" name="Drs. I Gusti Made Murjana, M.Pd" job="Sekretaris" />
+          <x-profile-block src="{{ Vite::asset('resources/images/yayasan/I Gusti Ngurah Wardana, S.Pt., MM.Kom.png') }}" name="I Gusti Ngurah Wardana, S.Pt., MM.Kom" job="Bendahara" />
         </div>
       </div>
     </div>

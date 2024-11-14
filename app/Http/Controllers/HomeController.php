@@ -177,4 +177,24 @@ class HomeController extends Controller
     {
         return view('public-relations.partnerships');
     }
+
+    /**
+     * Show the loans page
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function loans()
+    {
+        return view('student-affairs.loans');
+    }
+
+    /**
+     * Show the structure page
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function structure()
+    {
+        return view('about.structure');
+    }
 }

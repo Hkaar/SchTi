@@ -21,7 +21,7 @@
         <div class="flex items-center gap-2">
           <x-link-button to="#"
             class="border-2 border-tertiary bg-transparent px-4 py-3 text-base-dark hover:bg-tertiary hover:text-base-light">
-            Mau tau lebih lanjut ?
+            Punya Pertanyaan ?
           </x-link-button>
 
           <x-link-button to="#" class="bg-primary py-3 pe-3 ps-4">
