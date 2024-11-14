@@ -25,6 +25,22 @@ export default {
         'base-light': '#fafafa',
         'base-dark': '#101010'
       },
+      animation: {
+        "float-down": "float-down 2.5s ease-in-out infinite",
+      },
+      keyframes: {
+        "float-down": {
+          "0%": {
+            "transform": "translateY(0)",
+          },
+          "50%": {
+            "transform": "translateY(10px)",
+          },
+          "100%": {
+            "transform": "translateY(0)",
+          },
+        },
+      }
     },
   },
   plugins: [

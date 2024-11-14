@@ -1,5 +1,4 @@
-<div
-  class="dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 rounded-xl border bg-white shadow-sm sm:flex">
+<div {{ $attributes->twMerge(["class" => "dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70 rounded-xl border bg-white shadow-sm sm:flex"]) }}>
   <div
     class="sm:max-w-60 relative w-full shrink-0 overflow-hidden rounded-t-xl pt-[40%] sm:rounded-s-xl md:max-w-xs md:rounded-se-none">
     <img class="size-full absolute start-0 top-0 object-cover" src="{{ $src }}" alt="Card Image">
