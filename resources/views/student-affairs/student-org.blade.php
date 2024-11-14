@@ -23,7 +23,7 @@
           <x-profile-block src="{{ Vite::asset('resources/images/osis/sekre2.png') }}" name="I Made Dwi Laksmana Putra" job="Sekretaris 2" />
 
           <x-profile-block src="{{ Vite::asset('resources/images/osis/bendahara1.png') }}" name="Made Bayu Ardana Putra" job="Bendahara 1" />
-          <x-profile-block src="{{ Vite::asset('resources/images/osis/Bendahara2.png') }}" name="Kadek Dinda Amanda Putri" job="Bendahara 2" />
+          <x-profile-block src="{{ Vite::asset('resources/images/osis/bendahara2.png') }}" name="Kadek Dinda Amanda Putri" job="Bendahara 2" />
 
           <x-profile-block src="{{ Vite::asset('resources/images/osis/ketuhanan1.png') }}" name="Jhon Zenius Benediktus Suri" job="Ketuhanan & Ketakwaan" />
           <x-profile-block src="{{ Vite::asset('resources/images/osis/ketuhanan2.png') }}" name="I Kadek Deva Setiawan Putra" job="Ketuhanan & Ketakwaan" />

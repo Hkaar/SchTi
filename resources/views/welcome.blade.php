@@ -30,6 +30,12 @@
             <i class="material-symbols-outlined font-var-light">arrow_right_alt</i>
           </x-link-button>
         </div>
+
+        <div class="flex items-center gap-2 font-medium">
+          <i class="material-symbols-outlined font-var-light animate-float-down" style="font-size: 28px">arrow_cool_down</i>
+
+          Scroll ke bawah untuk lebih banyak
+        </div>
       </div>
 
       <div class="hidden flex-1 place-items-center lg:grid">
@@ -50,7 +56,7 @@
       </div>
 
       <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-        <x-card class="gap-3 border-l-8 border-l-secondary">
+        <x-card class="gap-3 border-l-8 border-l-secondary shadow-md">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">handshake</i>
 
@@ -63,7 +69,7 @@
           </p>
         </x-card>
 
-        <x-card class="gap-3 border-l-8 border-l-secondary">
+        <x-card class="gap-3 border-l-8 border-l-secondary shadow-md">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">group</i>
 
@@ -76,7 +82,7 @@
           </p>
         </x-card>
 
-        <x-card class="gap-3 border-l-8 border-l-secondary">
+        <x-card class="gap-3 border-l-8 border-l-secondary shadow-md">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">business</i>
 
@@ -89,7 +95,7 @@
           </p>
         </x-card>
 
-        <x-card class="gap-3 border-l-8 border-l-secondary">
+        <x-card class="gap-3 border-l-8 border-l-secondary shadow-md">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">category</i>
 
@@ -101,7 +107,7 @@
           </p>
         </x-card>
 
-        <x-card class="gap-3 border-l-8 border-l-secondary">
+        <x-card class="gap-3 border-l-8 border-l-secondary shadow-md">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">money_bag</i>
 
@@ -113,7 +119,7 @@
           </p>
         </x-card>
 
-        <x-card class="gap-3 border-l-8 border-l-secondary">
+        <x-card class="gap-3 border-l-8 border-l-secondary shadow-md">
           <div class="flex items-center gap-3 text-2xl">
             <i class="material-symbols-outlined font-var-light">school</i>
 
@@ -142,7 +148,7 @@
 
       <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
         <x-side-image-card title="Desain Komunikasi Visual" to="{{ route('about.majors') }}"
-          src="{{ Vite::asset('resources/images/bg1.jpg') }}">
+          src="{{ Vite::asset('resources/images/bg1.jpg') }}" class="shadow-md">
           <p class="dark:text-neutral-400 mt-1 line-clamp-3 text-gray-500">
             Membekali peserta didik dengan kompetensi dalam pengoperasian software ilustrasi digital, imaging digital,
             desain web, serta pengoperasian software dan periferal untuk audio digital, video digital, dan efek visual.
@@ -150,14 +156,14 @@
         </x-side-image-card>
 
         <x-side-image-card title="Pengembangan Perangkat Lunak dan Game" to="{{ route('about.majors') }}"
-          src="{{ Vite::asset('resources/images/bg2.png') }}">
+          src="{{ Vite::asset('resources/images/bg2.png') }}" class="shadow-md">
           <p class="dark:text-neutral-400 mt-1 line-clamp-3 text-gray-500">
             Membekali peserta didik dengan keterampilan pemrograman Stand Alone, Multi User, dan Web Programming.
           </p>
         </x-side-image-card>
 
         <x-side-image-card title="Teknik Jaringan Komputer dan Telekomunikasi" to="{{ route('about.majors') }}"
-          src="{{ Vite::asset('resources/images/bg3.jpg') }}">
+          src="{{ Vite::asset('resources/images/bg3.jpg') }}" class="shadow-md">
           <p class="dark:text-neutral-400 mt-1 line-clamp-3 text-gray-500">
             Membekali peserta didik dengan kemampuan merancang dan mengelola jaringan komputer yang aman, termasuk
             perlindungan data, subneting, routing, dan pengaturan internet. Lulusan dapat berkarir sebagai Network
@@ -166,7 +172,7 @@
         </x-side-image-card>
 
         <x-side-image-card title="Bisnis Digital" to="{{ route('about.majors') }}"
-          src="{{ Vite::asset('resources/images/bg4.jpg') }}">
+          src="{{ Vite::asset('resources/images/bg4.jpg') }}" class="shadow-md">
           <p class="dark:text-neutral-400 mt-1 line-clamp-3 text-gray-500">
             Mengajarkan pemanfaatan teknologi digital dalam operasi bisnis, termasuk Analisis Pasar, E-Commerce,
             Pengembangan Aplikasi, Analisis Big Data, serta Keamanan dan Etika Bisnis Digital.
