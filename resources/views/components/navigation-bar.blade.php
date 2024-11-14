@@ -109,7 +109,7 @@
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <x-dropdown-menu to="{{ $active === 'about.staff' ? '#' : route('about.staff') }}" :active="$active === 'about.staff'">
+                    <x-dropdown-menu to="{{ $active === 'about.structure' ? '#' : route('about.structure') }}" :active="$active === 'about.structure'">
                       <i class="material-symbols-outlined font-var-light">account_tree</i>
 
                       <div class="grow">
@@ -124,7 +124,7 @@
               <div class="hs-dropdown [--strategy:static] lg:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] lg:[--is-collapse:false] ">
                 <button id="hs-header-base-mega-menu-small" type="button" class="hs-dropdown-toggle w-full p-2 flex items-center gap-2 text-sm text-gray-800 hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:text-neutral-200 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700" aria-haspopup="menu" aria-expanded="false" aria-label="Mega Menu">
                   <div class="grid place-items-center lg:hidden">
-                    <i class="material-symbols-outlined font-var-light">book_ribbon</i>
+                    <i class="material-symbols-outlined font-var-light">menu_book</i>
                   </div>
 
                   Kurikulum
@@ -190,7 +190,7 @@
 
                     <div class="my-2 border-t border-gray-100 dark:border-neutral-800"></div>
 
-                    <x-dropdown-menu to="{{ $active === 'student-affairs' ? '#' : route('student-affairs') }}" :active="$active === 'student-affairs.loans'">
+                    <x-dropdown-menu to="{{ $active === 'student-affairs.loans' ? '#' : route('student-affairs.loans') }}" :active="$active === 'student-affairs.loans'">
                       <i class="material-symbols-outlined font-var-light">money_bag</i>
 
                       <div class="grow">
