@@ -1,6 +1,14 @@
 import 'preline';
 import 'material-symbols/outlined.css';
 
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Observer } from "gsap/Observer";
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(Observer);
+
 import.meta.glob([
     '../images/**/*',
 ]);

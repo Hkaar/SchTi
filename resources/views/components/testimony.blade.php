@@ -1,4 +1,4 @@
-<div class="flex flex-col rounded-md shadow-md border">
+<div {{ $attributes->twMerge(["class" => "flex flex-col rounded-md shadow-md border"]) }}>
   <div class="flex items-center flex-1">
     <p class="tracking-wide line-clamp-5 font-semibold text-xl px-6 py-4 italic">
       " {{ $slot }} "

@@ -1,4 +1,4 @@
-<div class="flex flex-col shadow-md rounded-md">
+<div {{ $attributes->twMerge(["class" => "flex flex-col shadow-md rounded-md"]) }}>
   <div class="flex-1">
     <img src="{{ isset($src) ? $src : 'https://placehold.co/600x400' }}" alt="Gambar tidak tersedia" class="block object-cover size-full max-h-72 rounded-t-md">
   </div>
